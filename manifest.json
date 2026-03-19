@@ -1,0 +1,15 @@
+{
+  "name": "Jola Beats Game Boy Player",
+  "short_name": "Jola Beats",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#d8d2c3",
+  "theme_color": "#d8d2c3",
+  "icons": [
+    {
+      "src": "img/gameboy-mockup.jpg",
+      "sizes": "1024x1536",
+      "type": "image/jpeg"
+    }
+  ]
+}

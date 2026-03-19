@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#d8d2c3" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Jola Beats" />
+  <title>Jola Beats — Game Boy Player</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="console" aria-label="Lecteur Game Boy fictif">
+      <img class="console-art" src="img/gameboy-mockup.jpg" alt="Console Game Boy fictive" />
+
+      <div class="screen-ui" aria-live="polite">
+        <div class="screen-top">
+          <div class="title-wrap">
+            <span class="title">JOLA'S BEATS</span>
+          </div>
+        </div>
+
+        <div class="playlist" id="playlist"></div>
+
+        <div class="status-zone">
+          <div class="now-line" id="nowLine">Prêt.</div>
+          <div class="eq" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="mini-hint" id="miniHint">A = Play / Pause · B = Next · Start = Info · Select = Mode</div>
+        </div>
+      </div>
+
+      <button class="hotspot hotspot-dpad up" data-action="up" aria-label="Haut"></button>
+      <button class="hotspot hotspot-dpad down" data-action="down" aria-label="Bas"></button>
+      <button class="hotspot hotspot-dpad left" data-action="prev" aria-label="Piste précédente"></button>
+      <button class="hotspot hotspot-dpad right" data-action="next" aria-label="Piste suivante"></button>
+      <button class="hotspot hotspot-dpad center" data-action="toggle" aria-label="Lecture pause"></button>
+
+      <button class="hotspot hotspot-a" data-action="toggle" aria-label="Bouton A"></button>
+      <button class="hotspot hotspot-b" data-action="next" aria-label="Bouton B"></button>
+      <button class="hotspot hotspot-select" data-action="mode" aria-label="Select"></button>
+      <button class="hotspot hotspot-start" data-action="info" aria-label="Start"></button>
+
+      <div class="led led-red" aria-hidden="true"></div>
+      <div class="speaker-glow" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <audio id="player" preload="metadata"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
